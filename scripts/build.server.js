@@ -27,6 +27,7 @@ if (!checkRequiredFiles([paths.serverRenderJs])) {
 
 function build() {
     console.log('Creating an server production build...');
+    console.log('yarn build:server 명령어 날릴때 실행');
 
     let compiler = webpack(config);
     return new Promise((resolve, reject) => {
