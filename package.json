@@ -30,6 +30,7 @@
     "koa": "^2.4.1",
     "koa-static": "^4.0.2",
     "node-sass": "^4.7.2",
+    "nuka-carousel": "^3.0.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
