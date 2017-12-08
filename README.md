@@ -1,2 +1,4 @@
 # onnuriPotal
-react web pack (onnuri)
+
+- react
+- react-router-dom
