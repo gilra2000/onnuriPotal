@@ -9,13 +9,11 @@ const Menu = () => {
 
     return (
         <div>
-            <ui>
-                <li><NavLink exact to="/" activeStyle={activeStyle}>홈입니다</NavLink></li>
-                <li><NavLink exact to="/about" activeStyle={activeStyle}>About</NavLink></li>
-                <li><NavLink to="/about/foo" activeStyle={activeStyle}>About Foo</NavLink></li>
-                <li><NavLink to="/posts" activeStyle={activeStyle}>Posts</NavLink></li>
-                <li><NavLink to="/users" activeStyle={activeStyle}>Users</NavLink></li>
-            </ui>
+            <NavLink exact to="/" activeStyle={activeStyle}>홈입니다</NavLink>
+            <NavLink exact to="/about" activeStyle={activeStyle}>About</NavLink>
+            <NavLink to="/about/foo" activeStyle={activeStyle}>About Foo</NavLink>
+            <NavLink to="/posts" activeStyle={activeStyle}>Posts</NavLink>
+            <NavLink to="/users" GactiveStyle={activeStyle}>Users</NavLink>
         </div>
     )
 }
