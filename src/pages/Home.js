@@ -61,20 +61,15 @@ class Home extends React.Component {
           <div>
               <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
 
-              <div style={{backgroundColor:'#f5f5f5', width:'100%', height:600, display:'flex', justifyContent:'center', alignItems:'center'}}>
-                  <Carousel ref="carousel" slideIndex={this.state.slideIndex} wrapAround={true} width={'100%'} style={{maxWidth:1200, minWidth:400}} >
-                      <div>
-                          <img src="http://www.onnuri.org/wp-content/uploads/2017/12/2017_petitM.jpg"/>
-                      </div>
-                      <div>
-                          <img src="http://www.onnuri.org/wp-content/uploads/2017/11/angeltree_17.png"/>
-                      </div>
-                      <div>
-                          <img src="http://www.onnuri.org/wp-content/uploads/2017/02/2017_slogan_mainIndex06-1.png"/>
-                      </div>
-
+              <div style={{backgroundColor:'#f5f5f5'}}>
+                  <Carousel ref="carousel" slideIndex={this.state.slideIndex} wrapAround={true} width={'100%'} style={{maxWidth:1200, minWidth:400, margin:'auto'}} >
+                      <img src="http://www.onnuri.org/wp-content/uploads/2017/12/2017_petitM.jpg"/>
+                      <img src="http://www.onnuri.org/wp-content/uploads/2017/11/angeltree_17.png"/>
+                      <img src="http://www.onnuri.org/wp-content/uploads/2017/02/2017_slogan_mainIndex06-1.png"/>
                   </Carousel>
               </div>
+
+
 
               <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
                   <div
