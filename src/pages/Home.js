@@ -74,7 +74,7 @@ class Home extends React.Component {
               {/*<div className={cx('myClass')}>*/}
 
               {/*</div>*/}
-
+v
               <div style={{margin: 'auto', maxWidth:1200, paddingTop:40}}>
                   <Grid container justify={'center'}>
                       <Grid item xs={12} sm={3}>
@@ -108,6 +108,32 @@ class Home extends React.Component {
                           <div style={{backgroundColor:'#009fa5', height:'100%'}}>
 
                           </div>
+                      </Grid>
+                  </Grid>
+              </div>
+
+              <div style={{margin: 'auto', maxWidth:1200, paddingTop:20}}>
+                  <Grid container justify={'center'}>
+                      <Grid container xs={12} sm={12}>
+                          <Grid item xs={12} sm={2}>
+                              <img src={'http://www.onnuri.org/wp-content/uploads/2017/12/oF_yangjae_1203-188x111.png'} />
+                          </Grid>
+                          <Grid item xs={12} sm={2}>
+                              <img src={'http://www.onnuri.org/wp-content/uploads/2017/12/joshua_1203-188x111.png'} />
+                          </Grid>
+                          <Grid item xs={12} sm={2}>
+                              <img src={'http://www.onnuri.org/wp-content/uploads/2017/12/oF_seobingo_1203.png'} />
+                          </Grid>
+                      </Grid>
+
+
+                      <Grid item xs={12} sm={3}>
+                          <div style={{backgroundColor:'#00a392', height:'100%'}}>
+
+                          </div>
+                      </Grid>
+                      <Grid item xs={12} sm={3}>
+                          <img src={'http://www.onnuri.org/wp-content/uploads/2015/04/ba002.png'} />
                       </Grid>
                   </Grid>
               </div>
