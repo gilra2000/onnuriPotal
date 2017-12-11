@@ -32,3 +32,17 @@
   backgroundColor:'rgba(85, 85, 85, .7)';
   background: linear-gradient( to bottom, rgba(99, 99, 99, 0.7), rgba(57, 57, 57, 0.7));
 }
+
+.myClass{
+  width:800px;
+  height:200px;
+  background-color: red;
+}
+
+@media (max-width: 500px) {
+  .myClass{
+    width:500px;
+    height:150px;
+    background-color: blue;
+  }
+}
