@@ -3,10 +3,8 @@ import styles from '../index.scss';
 import classNames from 'classnames/bind';
 import Carousel from 'nuka-carousel';
 
-import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
-import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 
 import Grid from 'material-ui/Grid';
@@ -36,24 +34,12 @@ class Home extends React.Component {
     };
 
   componentDidMount(){
-    // console.log(this.refs.carousel)
-    setTimeout(()=>{
-      this.setState({slideIndex: 0})
-    }, 10)
   }
 
   render(){
 
       const sideList = (
           <div style={{width:250}}>
-
-              <Divider />
-
-          </div>
-      );
-
-      const fullList = (
-          <div style={{width:'auto'}}>
 
               <Divider />
 
@@ -107,7 +93,7 @@ class Home extends React.Component {
                       </Grid>
                       <Grid item xs={11} sm={3}>
                           <div style={{backgroundColor:'#009fa5', height:'99%'}}>
-123123123123123
+123123123123123v
                           </div>
                       </Grid>
                   </Grid>

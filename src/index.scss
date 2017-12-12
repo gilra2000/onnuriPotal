@@ -46,3 +46,14 @@
     background-color: blue;
   }
 }
+
+.logoFooter {
+  width: 138px;
+  height: 46px;
+  margin-left: 10px;
+  background: url(./image/onr.png) no-repeat -100px -1000px;
+  text-indent: -99999px;
+  transition: opacity 0.3s ease-in-out;
+  float: inherit;
+  display: block;
+}
