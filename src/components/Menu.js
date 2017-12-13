@@ -1,5 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from '../index.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 class Menu extends React.Component {
 
@@ -14,17 +18,26 @@ class Menu extends React.Component {
     render(){
         return(
             <div>
-            <div style={{backgroundColor:'rgba(85, 85, 85, .7)', height:30}}>
+                <div className={cx('onr_gnb')}>
+                    <div className={cx('full')}>
+                      <h1 className={cx('logo')}>
+                        <a href='/' title={'Onnuri'} className={cx('logoa')}>
+                          <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:110, height:'auto', paddingTop:22}} />
+                        </a>
+                      </h1>
+                    </div>
+                </div>
+                <div className={cx('header')}>
 
-            </div>
+                </div>
 
-            <div onClick={()=>{this.setState({isView: !this.state.isView})}} style={{height:54, backgroundColor:'#f6f6f6'}}>
+                {/*<div onClick={()=>{this.setState({isView: !this.state.isView})}} style={{height:54, backgroundColor:'#f6f6f6'}}>*/}
 
-            </div>
-                {
-                    this.state.isView &&
-                    <div style={{height:100, backgroundColor:'red', float:'top'}}></div>
-                }
+                {/*</div>*/}
+                    {/*{*/}
+                        {/*this.state.isView &&*/}
+                        {/*<div style={{width:'100%', height:100, backgroundColor:'red', position:'absolute', zIndex:9999}}></div>*/}
+                    {/*}*/}
             </div>
 
         )

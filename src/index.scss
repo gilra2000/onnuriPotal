@@ -47,13 +47,57 @@
   }
 }
 
-.logoFooter {
-  width: 138px;
-  height: 46px;
-  margin-left: 10px;
-  background: url(./image/onr.png) no-repeat -100px -1000px;
-  text-indent: -99999px;
-  transition: opacity 0.3s ease-in-out;
-  float: inherit;
-  display: block;
+.onr_gnb {
+  width: 100%;
+  height: 29px;
+  display: table;
+  background-color: #555;
+  background-color: rgba(85, 85, 85, .7);
+  background: url('http://www.onnuri.org/wp-content/themes/onnuri/images/bg_header.png') 0 0 repeat-x;
 }
+
+.full {
+  position:relative;
+  max-width: 1080px;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.logo {
+  z-index: 1000000000;
+  position: absolute;
+  top: -21px;
+}
+
+.logoa{
+  display: block;
+  text-align: center;
+  width: 146px;
+  height: 85px;
+  border-radius: 0 0 5px 5px;
+  background-clip: padding-box;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(172,172,172,.5);
+  z-index: 10;
+}
+
+.header{
+  height:50px;
+  z-index: 500;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  position: relative;
+  background: url('http://www.onnuri.org/wp-content/themes/onnuri/images/bg_header_gnb.png') 0 bottom repeat-x;
+}
+
+//.logoFooter {
+//  width: 138px;
+//  height: 46px;
+//  margin-left: 10px;
+//  background: url(./image/onr.png) no-repeat -100px -1000px;
+//  text-indent: -99999px;
+//  transition: opacity 0.3s ease-in-out;
+//  float: inherit;
+//  display: block;
+//}
