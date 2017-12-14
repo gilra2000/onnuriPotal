@@ -25,6 +25,13 @@ class Menu extends React.Component {
                           <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:110, height:'auto', paddingTop:22}} />
                         </a>
                       </h1>
+
+                      <ul className={cx('headerUl')}>
+                        <li className={cx('headerLi')}>
+                          <a href="http://news.onnuri.org" title="온누리신문" target="_blank" className={cx('headerA')} >온누리신문</a>
+                        </li>
+                      </ul>
+
                     </div>
                 </div>
                 <div className={cx('header')}>
