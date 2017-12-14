@@ -88,7 +88,7 @@ class Home extends React.Component {
                       </Grid>
                       <Grid item xs={11} sm={3}>
                           <div style={{backgroundColor:'#008dab', height:'99%'}}>
-44444444444444444
+온누리교회
                           </div>
                       </Grid>
                       <Grid item xs={11} sm={3}>
