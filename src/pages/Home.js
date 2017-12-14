@@ -51,7 +51,7 @@ class Home extends React.Component {
               {/*<Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>*/}
 
               <div style={{backgroundColor:'#f5f5f5'}}>
-                  <Carousel ref="carousel" autoplay={true} autoplayInterval={5000} slideIndex={this.state.slideIndex} wrapAround={true} width={'100%'} style={{maxWidth:1080, minWidth:400, margin:'auto'}} >
+                  <Carousel ref="carousel" autoplay={true} autoplayInterval={5000} slideIndex={this.state.slideIndex} wrapAround={true} width={'100%'} style={{maxWidth:1180, minWidth:400, margin:'auto'}} >
                       <img src="http://www.onnuri.org/wp-content/uploads/2017/12/2017_petitM.jpg"/>
                       <img src="http://www.onnuri.org/wp-content/uploads/2017/11/angeltree_17.png"/>
                       <img src="http://www.onnuri.org/wp-content/uploads/2017/02/2017_slogan_mainIndex06-1.png"/>
@@ -62,7 +62,7 @@ class Home extends React.Component {
 
               {/*</div>*/}
 
-              <div style={{margin: 'auto', maxWidth:1080, paddingTop:40}}>
+              <div style={{margin: 'auto', maxWidth:1180, paddingTop:40}}>
                   <Grid container justify={'center'}>
                       <Grid item xs={6} sm={3}>
                           <img src={'http://www.onnuri.org/wp-content/uploads/2016/11/petitmatin02.png'} style={{width:'100%', height:'auto'}} />
@@ -81,7 +81,7 @@ class Home extends React.Component {
                   </Grid>
               </div>
 
-              <div style={{margin: 'auto', maxWidth:1080, paddingTop:20}}>
+              <div style={{margin: 'auto', maxWidth:1180, paddingTop:20}}>
                   <Grid container justify={'center'}>
                       <Grid item xs={11} sm={6}>
                           <img src={'http://www.onnuri.org/wp-content/themes/onnuri/images/main/sermonweek.png'} style={{width:'100%', height:'auto'}} />
@@ -99,7 +99,7 @@ class Home extends React.Component {
                   </Grid>
               </div>
 
-              <div style={{margin: 'auto', maxWidth:1080, paddingTop:20}}>
+              <div style={{margin: 'auto', maxWidth:1180, paddingTop:20}}>
                   <Grid container justify={'center'}>
                       <Grid item xs={6}>
                           <Grid container>
