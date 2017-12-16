@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from '../index.scss';
+import styles from '../css/components/header/Menu.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
@@ -17,7 +17,7 @@ class Menu extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className={cx('bg')}>
                 <div className={cx('onr_gnb')}>
                     <div className={cx('full')}>
                       <h1 className={cx('logo')}>
@@ -28,7 +28,22 @@ class Menu extends React.Component {
 
                       <ul className={cx('headerUl')}>
                         <li className={cx('headerLi')}>
-                          <a href="http://news.onnuri.org" title="온누리신문" target="_blank" className={cx('headerA')} >온누리신문</a>
+                          <a href="http://news.onnuri.org" title="온누리신문" target="_blank" className={cx('header_right_a_01')} >온누리신문</a>
+                        </li>
+                        <li className={cx('headerLi')}>
+                          <a href="http://ischool.ionnuri.org/ischool/jsp/pre_index.jsp" title="아이스쿨" target="_blank" className={cx('header_right_a_01')}>아이스쿨</a>
+                        </li>
+                        <li className={cx('headerLi')}>
+                          <a href="http://blog.cgntv.net/club/club_main.asp" title="커뮤니티" target="_blank" className={cx('header_right_a_01')}>커뮤니티</a>
+                        </li>
+                        <li className={cx('headerLi')}>
+                          <a href="http://vision.onnuri.org" title="캠퍼스 · 비전교회" target="_blank" className={cx('header_right_a_01')}>캠퍼스 · 비전교회</a>
+                        </li>
+                        <li className={cx('headerLi')}>
+                          <a href="http://www.cgntv.net/" title="CGNTV" target="_blank" className={cx('header_right_a_01')}>CGNTV</a>
+                        </li>
+                        <li className={cx('headerLi')}>
+                          <span class="btnSearch schopen" className={cx('header_right_a_01')}>검색</span>
                         </li>
                       </ul>
 
