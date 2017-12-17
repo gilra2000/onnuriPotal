@@ -27,13 +27,19 @@
 .logoa{
   display: block;
   text-align: center;
-  width: 146px;
-  height: 85px;
+  width: 161px;
+  height: 94px;
   border-radius: 0 0 5px 5px;
   background-clip: padding-box;
   background-color: #fff;
   box-shadow: 0 0 4px rgba(172,172,172,.5);
   z-index: 10;
+}
+
+.logoImg {
+  width: 124px;
+  height: auto;
+  padding-top: 25px;
 }
 
 .header{

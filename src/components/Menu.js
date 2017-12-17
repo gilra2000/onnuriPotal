@@ -22,7 +22,7 @@ class Menu extends React.Component {
                     <div className={cx('full')}>
                       <h1 className={cx('logo')}>
                         <a href='/' title={'Onnuri'} className={cx('logoa')}>
-                          <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:110, height:'auto', paddingTop:22}} />
+                          <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" className={cx('logoImg')} />
                         </a>
                       </h1>
 
