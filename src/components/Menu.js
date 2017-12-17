@@ -42,9 +42,9 @@ class Menu extends React.Component {
                         <li className={cx('headerLi')}>
                           <a href="http://www.cgntv.net/" title="CGNTV" target="_blank" className={cx('header_right_a_01')}>CGNTV</a>
                         </li>
-                        <li className={cx('headerLi')}>
-                          <span class="btnSearch schopen" className={cx('header_right_a_01')}>검색</span>
-                        </li>
+                        {/*<li className={cx('headerLi')}>*/}
+                          {/*<span class="btnSearch schopen" className={cx('header_right_a_01')}>검색</span>*/}
+                        {/*</li>*/}
                       </ul>
 
                     </div>
