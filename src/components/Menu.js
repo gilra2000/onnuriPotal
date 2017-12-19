@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../css/components/header/Menu.scss';
 import classNames from 'classnames/bind';
+import {Motion, spring} from 'react-motion';
+import Grid from 'material-ui/Grid';
 
 const cx = classNames.bind(styles);
 
@@ -11,13 +13,35 @@ class Menu extends React.Component {
         super(props);
 
         this.state = {
-            isView: false
+            isMenuView: false,
+            motionHeight: 0
         }
+    }
+
+    componentDidMount(){
+
+    }
+
+    menuClick(){
+      // console.log(event.target.tagName)
+      if(this.state.isMenuView){
+        this.setState({
+          isMenuView: false,
+          motionHeight: 0
+        })
+      }else{
+        this.setState({
+          isMenuView: true,
+          motionHeight: 300
+        })
+      }
+
     }
 
     render(){
         return(
             <div className={cx('bg')}>
+
                 <div className={cx('onr_gnb')}>
                     <div className={cx('full')}>
                       <h1 className={cx('logo')}>
@@ -49,9 +73,44 @@ class Menu extends React.Component {
 
                     </div>
                 </div>
-                <div className={cx('header')}>
+                <div className={cx('header')} >
+                  <div style={{margin: 'auto', maxWidth:1050}}>
+                    <Grid container >
+                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}></Grid>
+                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
+                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>환영합니다</div>
+                      </Grid>
+                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
+                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>소개합니다</div>
+                      </Grid>
+                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
+                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>예배와 말씀</div>
+                      </Grid>
+                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
+                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>공동체와 양육</div>
+                      </Grid>
+                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
+                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>선교와 사역</div>
+                      </Grid>
+                    </Grid>
+                  </div>
 
                 </div>
+
+                <Motion
+                  defaultStyle={{height:0}}
+                  style={{ height:spring(this.state.motionHeight) }}
+                >
+                  {(style)=>(
+                    <div style={{width:'100%', height:100, position:'absolute', zIndex:99999}}>
+                      <div style={{height:style.height, width:'100%', backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)', }}>
+
+
+                      </div>
+                    </div>
+                  )}
+
+                </Motion>
 
                 {/*<div onClick={()=>{this.setState({isView: !this.state.isView})}} style={{height:54, backgroundColor:'#f6f6f6'}}>*/}
 
