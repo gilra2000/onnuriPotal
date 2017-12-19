@@ -7,6 +7,8 @@ import Grid from 'material-ui/Grid';
 
 const cx = classNames.bind(styles);
 
+const MENU_ITEMS = ['환영합니다', '소개합니다','예배와 말씀', '공동체와 양육', '선교와 사역'];
+
 class Menu extends React.Component {
 
     constructor(props){
@@ -14,27 +16,36 @@ class Menu extends React.Component {
 
         this.state = {
             isMenuView: false,
-            motionHeight: 0
+            motionHeight: 0,
+            activeMenu: ''
         }
+
     }
 
     componentDidMount(){
 
     }
 
-    menuClick(){
-      // console.log(event.target.tagName)
-      if(this.state.isMenuView){
+    menuClick(pos){
+      if(this.state.activeMenu === pos){
         this.setState({
           isMenuView: false,
+          activeMenu: '',
           motionHeight: 0
         })
       }else{
         this.setState({
           isMenuView: true,
+          activeMenu: pos,
           motionHeight: 300
         })
       }
+      // console.log(event.target.tagName)
+      // if(this.state.isMenuView){
+      //
+      // }else{
+      //
+      // }
 
     }
 
@@ -77,21 +88,18 @@ class Menu extends React.Component {
                   <div style={{margin: 'auto', maxWidth:1050}}>
                     <Grid container >
                       <Grid item xs={3} sm={2} style={{textAlign:'center'}}></Grid>
-                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
-                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>환영합니다</div>
-                      </Grid>
-                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
-                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>소개합니다</div>
-                      </Grid>
-                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
-                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>예배와 말씀</div>
-                      </Grid>
-                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
-                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>공동체와 양육</div>
-                      </Grid>
-                      <Grid item xs={3} sm={2} style={{textAlign:'center'}}>
-                        <div onClick={this.menuClick.bind(this)} className={cx('header_menu_text')}>선교와 사역</div>
-                      </Grid>
+                      {
+                        MENU_ITEMS.map((val, key)=> {
+                          return <Grid keys={key} item xs={3} sm={2} style={{textAlign:'center'}}>
+                                   <div onClick={this.menuClick.bind(this, key)} className={cx('header_menu_text')}>
+                                     {val}  <i class="fa fa-angle-down " aria-hidden="true"></i>
+                                   </div>
+                              {
+                                this.state.activeMenu === key && <div className={cx('header_menu_img')}>&nbsp;</div>
+                              }
+                                 </Grid>
+                        })
+                      }
                     </Grid>
                   </div>
 
@@ -103,9 +111,15 @@ class Menu extends React.Component {
                 >
                   {(style)=>(
                     <div style={{width:'100%', height:100, position:'absolute', zIndex:99999}}>
-                      <div style={{height:style.height, width:'100%', backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)', }}>
-
-
+                      <div style={{height:style.height, width:'100%', backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)'}}>
+                        {
+                          this.state.activeMenu !== '' &&
+                          <div style={{width:'1200px', margin:'auto'}}>
+                            <div className={cx('menu_contents')}>
+                              환영합니다
+                            </div>
+                          </div>
+                        }
                       </div>
                     </div>
                   )}

@@ -75,7 +75,24 @@
 
 .header_menu_text {
   font-size: 20px;
-  font-weight: bold;
-  color:#444444;
   cursor: pointer;
+  display: block;
+  color: #363636;
+  font-weight: bold;
+}
+
+.header_menu_img {
+  margin-top: -10px;
+  background: url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_gnb_ar.png) 45% bottom no-repeat;
+}
+
+.menu_contents {
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 0 1px 0 rgba(36,113,129,.75);
+  font-weight: bold;
+  padding-bottom: 20px;
+  display: block;
+  line-height: 1.2;
+  padding:30px;
 }
