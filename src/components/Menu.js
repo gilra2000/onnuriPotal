@@ -5,6 +5,9 @@ import classNames from 'classnames/bind';
 import {Motion, spring} from 'react-motion';
 import Grid from 'material-ui/Grid';
 import debounce from 'lodash/debounce';
+import Menu_First_Content from 'components/Menu_First_Content';
+import Menu_Second_Content from 'components/Menu_Second_Content';
+
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = ['환영합니다', '소개합니다','예배와 말씀', '공동체와 양육', '선교와 사역'];
@@ -30,7 +33,6 @@ class Menu extends React.Component {
     }
 
     componentDidMount(){
-
     }
 
     menuClick(pos){
@@ -53,6 +55,21 @@ class Menu extends React.Component {
             motionHeight: 0,
             isMenuContent:false
         })
+    }
+
+    getMenuContent(height){
+        switch(this.state.activeMenu){
+            case 0: return <Menu_First_Content height={height} menuHide={this.menuHide.bind(this)}/>
+                break;
+            case 1: return <Menu_Second_Content height={height} menuHide={this.menuHide.bind(this)}/>
+                break;
+            case 2: return <Menu_First_Content height={height} menuHide={this.menuHide.bind(this)}/>
+                break;
+            case 3: return <Menu_First_Content height={height} menuHide={this.menuHide.bind(this)}/>
+                break;
+            case 4: return <Menu_First_Content height={height} menuHide={this.menuHide.bind(this)}/>
+                break;
+        }
     }
 
     render(){
@@ -83,9 +100,6 @@ class Menu extends React.Component {
                         <li className={cx('headerLi')}>
                           <a href="http://www.cgntv.net/" title="CGNTV" target="_blank" className={cx('header_right_a_01')}>CGNTV</a>
                         </li>
-                        {/*<li className={cx('headerLi')}>*/}
-                          {/*<span class="btnSearch schopen" className={cx('header_right_a_01')}>검색</span>*/}
-                        {/*</li>*/}
                       </ul>
 
                     </div>
@@ -124,90 +138,7 @@ class Menu extends React.Component {
                         {
                           this.state.activeMenu !== '' &&
                           <div style={{margin: 'auto', maxWidth:1180}}>
-                                  <Grid container >
-                                      <Grid item sm={2} >
-                                          <div className={cx('menu_contents')} style={{paddingLeft:0, paddingBottom:20}} >
-                                              환영합니다
-                                          </div>
-                                          <div className={cx('menu_contents_sub_text')}>
-                                              온누리교회에 처음 오신 분들을 위한 교회 방문부터 온누리 교인이 되기까지의 과정
-                                          </div>
-                                          <div>
-                                              {
-                                                  style.height > 250 && <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/gnb_icon_1.png" alt="" />
-                                              }
-
-                                          </div>
-                                      </Grid>
-                                      <Grid item sm={2} >
-                                          <div className={cx('menu_contents')} >
-                                              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_001.jpg" alt=""  style={{marginLeft:0}}/>
-                                          </div>
-                                          <div style={{marginLeft:13}}>
-                                              <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                                                  환영합니다
-                                              </div>
-                                              <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                                                  온누리교회에 소중한 발걸음을 해주신 새가족을 위한 정보를 한눈에!
-                                              </div>
-                                          </div>
-
-                                      </Grid>
-                                      <Grid item sm={2}  style={{marginLeft:5}}>
-                                          <div className={cx('menu_contents')}>
-                                              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_002.jpg" alt=""  style={{marginLeft:-5}}/>
-                                          </div>
-                                          <div style={{marginLeft:8}}>
-                                              <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                                                  교회 방문하기
-                                              </div>
-                                              <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                                                  서빙고, 양재를 비롯해 지역별 온누리교회로 오시는 길을 안내합니다.
-                                              </div>
-                                          </div>
-                                      </Grid>
-                                      <Grid item sm={2} style={{marginLeft:0}}>
-                                          <div className={cx('menu_contents')}>
-                                              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_003.jpg" alt=""  style={{marginLeft:-10}}/>
-                                          </div>
-                                          <div style={{marginLeft:0}}>
-                                              <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                                                  새가족 등록하기
-                                              </div>
-                                              <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                                                  온누리 교인이 되기 위한 첫 걸음, 새가족 등록에 대한 모든 것
-                                              </div>
-                                          </div>
-                                      </Grid>
-                                      <Grid item sm={2} style={{marginLeft:0}}>
-                                          <div className={cx('menu_contents')}>
-                                              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_004.jpg" alt=""  style={{marginLeft:-15}}/>
-                                          </div>
-                                          <div style={{marginLeft:0}}>
-                                              <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                                                  사역 참여하기
-                                              </div>
-                                              <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                                                  온누리교회의 교인이 되었다면 사역에 참여할 준비가 되었습니다.
-                                              </div>
-                                          </div>
-                                      </Grid>
-                                      <Grid item sm={2} style={{marginLeft:-5}}>
-                                          <div className={cx('menu_contents')}>
-                                              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_005.jpg" alt=""  style={{marginLeft:-15}}/>
-                                          </div>
-                                          <div style={{marginLeft:0}}>
-                                              <div style={{fontSize:18, paddingTop:15, color:'#fff'}} onClick={this.menuHide.bind(this)}>
-                                                  <NavLink to="/posts"  >교회 용어집</NavLink>
-                                              </div>
-                                              <div style={{fontSize:18, paddingTop:15, color:'#fff'}} onClick={this.menuHide.bind(this)}>
-                                                  <NavLink to="/users"  >새가족 FAQ</NavLink>
-                                              </div>
-                                          </div>
-                                      </Grid>
-
-                                  </Grid>
-
+                              { this.getMenuContent(style.height) }
                           </div>
                         }
                       </div>
