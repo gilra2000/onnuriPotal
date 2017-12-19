@@ -17,13 +17,14 @@ class Menu extends React.Component {
         this.state = {
             isMenuView: false,
             motionHeight: 0,
-            activeMenu: ''
+            activeMenu: '',
+            isMenuContent: false
         }
 
     }
 
     componentDidMount(){
-
+        v
     }
 
     menuClick(pos){
@@ -37,7 +38,7 @@ class Menu extends React.Component {
         this.setState({
           isMenuView: true,
           activeMenu: pos,
-          motionHeight: 300
+          motionHeight: 400
         })
       }
       // console.log(event.target.tagName)
@@ -85,7 +86,7 @@ class Menu extends React.Component {
                     </div>
                 </div>
                 <div className={cx('header')} >
-                  <div style={{margin: 'auto', maxWidth:1050}}>
+                  <div className={cx('header-inner')}>
                     <Grid container >
                       <Grid item xs={3} sm={2} style={{textAlign:'center'}}></Grid>
                       {
@@ -114,10 +115,50 @@ class Menu extends React.Component {
                       <div style={{height:style.height, width:'100%', backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)'}}>
                         {
                           this.state.activeMenu !== '' &&
-                          <div style={{width:'1200px', margin:'auto'}}>
-                            <div className={cx('menu_contents')}>
-                              환영합니다
-                            </div>
+                          <div className={cx('menu_contents_layout')}>
+                              {
+                                  this.state.isMenuContent &&
+                                  <Grid container>
+                                      <Grid item sm={2} >
+                                          <div className={cx('menu_contents')} style={{paddingLeft:0}} >
+                                              환영합니다
+                                          </div>
+                                          <div className={cx('menu_contents_sub_text')}>
+                                              온누리교회에 처음 오신 분들을 위한 교회 방문부터 온누리 교인이 되기까지의 과정
+                                          </div>
+                                          <div>
+                                              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/gnb_icon_1.png" alt="" />
+                                          </div>
+                                      </Grid>
+                                      <Grid item sm={2} >
+                                          <div className={cx('menu_contents')}>
+                                              환영합니다
+                                          </div>
+                                      </Grid>
+                                      <Grid item sm={2} >
+                                          <div className={cx('menu_contents')}>
+                                              환영합니다
+                                          </div>
+                                      </Grid>
+                                      <Grid item sm={2} >
+                                          <div className={cx('menu_contents')}>
+                                              환영합니다
+                                          </div>
+                                      </Grid>
+                                      <Grid item sm={2} >
+                                          <div className={cx('menu_contents')}>
+                                              환영합니다
+                                          </div>
+                                      </Grid>
+                                      <Grid item sm={2} >
+                                          <div className={cx('menu_contents')}>
+                                              환영합니다
+                                          </div>
+                                      </Grid>
+
+                                  </Grid>
+                              }
+
                           </div>
                         }
                       </div>
