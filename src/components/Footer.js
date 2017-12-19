@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const Footer = () => {
     return (
-        <div>
+        <div style={{height:'100%'}}>
             <div style={{height:423, backgroundColor:'#fbfbfb'}}></div>
 
             <div style={{height:227, width:'100%', backgroundColor:'#515456', textAlign:'center'}}>
