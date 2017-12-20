@@ -2,97 +2,154 @@ import React from 'react';
 import styles from '../css/components/header/Menu.scss';
 import classNames from 'classnames/bind';
 import Grid from 'material-ui/Grid';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
 const cx = classNames.bind(styles);
 
 class Menu_Second_Content extends React.Component {
-    render(){
-        return(
-            <Grid container >
-                <Grid item sm={2} >
-                    <div className={cx('menu_contents')} style={{paddingLeft:0, paddingBottom:20}} >
-                        소개합니다
-                    </div>
-                    <div className={cx('menu_contents_sub_text')}>
-                        온누리교회의 역사를 비롯해 교회 시설, 주차안내, 기부금영수증과 같은 행정지원까지 온누리교회에 대한 모든 것.
-                    </div>
-                    <div>
-                        {
-                            this.props.height > 250 && <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/gnb_icon_2.png" alt="" />
-                        }
+  render() {
+    return (
+      <Grid container>
+        <Grid item sm={2}>
+          <div className={cx('menu_contents')} style={{paddingLeft: 0, paddingBottom: 20}}>
+            소개합니다
+          </div>
+          <div className={cx('menu_contents_sub_text')} style={{width:155}}>
+            온누리교회의 역사를 비롯해 교회 시설, 주차안내, 기부금영수증과 같은 행정지원까지 온누리교회에 대한 모든 것.
+          </div>
+          <div>
+            {
+              this.props.height > 250 &&
+              <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/gnb_icon_2.png" alt=""/>
+            }
 
-                    </div>
-                </Grid>
+          </div>
+        </Grid>
 
-                <Grid item sm={2} >
-                    <div className={cx('menu_contents')} >
-                        <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_001.jpg" alt=""  style={{marginLeft:0}}/>
-                    </div>
-                    <div style={{marginLeft:13}}>
-                        <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                            환영합니다
-                        </div>
-                        <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                            온누리교회에 소중한 발걸음을 해주신 새가족을 위한 정보를 한눈에!
-                        </div>
-                    </div>
+        <Grid item sm={2}>
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            교회소개
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;담임목사 인사말
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;2017년 목회계획
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;온누리 비전
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;온누리 목회철학
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;온누리 발자취
+          </div>
+        </Grid>
+        <Grid item sm={2} style={{marginLeft: 15}}>
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            예배시간
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;서빙고 온누리교회
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;양재 온누리교회
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;대학청년
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;외국어
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;캠퍼스 · 비전교회
+          </div>
 
-                </Grid>
-                <Grid item sm={2}  style={{marginLeft:5}}>
-                    <div className={cx('menu_contents')}>
-                        <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_002.jpg" alt=""  style={{marginLeft:-5}}/>
-                    </div>
-                    <div style={{marginLeft:8}}>
-                        <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                            교회 방문하기
-                        </div>
-                        <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                            서빙고, 양재를 비롯해 지역별 온누리교회로 오시는 길을 안내합니다.
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item sm={2} style={{marginLeft:0}}>
-                    <div className={cx('menu_contents')}>
-                        <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_003.jpg" alt=""  style={{marginLeft:-10}}/>
-                    </div>
-                    <div style={{marginLeft:0}}>
-                        <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                            새가족 등록하기
-                        </div>
-                        <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                            온누리 교인이 되기 위한 첫 걸음, 새가족 등록에 대한 모든 것
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item sm={2} style={{marginLeft:0}}>
-                    <div className={cx('menu_contents')}>
-                        <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_004.jpg" alt=""  style={{marginLeft:-15}}/>
-                    </div>
-                    <div style={{marginLeft:0}}>
-                        <div style={{fontSize:18, paddingTop:15, color:'#fff'}}>
-                            사역 참여하기
-                        </div>
-                        <div className={cx('menu_contents_sub_text')} style={{paddingTop:13, width:190}}>
-                            온누리교회의 교인이 되었다면 사역에 참여할 준비가 되었습니다.
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item sm={2} style={{marginLeft:-5}}>
-                    <div className={cx('menu_contents')}>
-                        <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/mega_01_005.jpg" alt=""  style={{marginLeft:-15}}/>
-                    </div>
-                    <div style={{marginLeft:0}}>
-                        <div style={{fontSize:18, paddingTop:15, color:'#fff'}} onClick={this.props.menuHide}>
-                            <NavLink to="/posts"  >교회 용어집</NavLink>
-                        </div>
-                        <div style={{fontSize:18, paddingTop:15, color:'#fff'}} onClick={this.props.menuHide}>
-                            <NavLink to="/users"  >새가족 FAQ</NavLink>
-                        </div>
-                    </div>
-                </Grid>
-            </Grid>
-        )
-    }
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            금주의 주보
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;서빙고 온누리교회
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;양재 온누리교회
+          </div>
+        </Grid>
+        <Grid item sm={2} style={{marginLeft: 15}}>
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            섬기는 사람들
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;담당목사
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;부목사
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;전도사
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;파트교역자
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;장로
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;선교/복지재단
+          </div>
+
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            행정 · 성도지원
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;결혼예배
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;헌금 안내
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;행정부서 안내
+          </div>
+
+        </Grid>
+        <Grid item sm={2} style={{marginLeft: 15}}>
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            교회 시설
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;서빙고 온누리교회
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;양재 온누리교회
+          </div>
+
+
+          <div className={cx('menu_contents_title')} style={{padding: 30}}>
+            약도/주차
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;서빙고 온누리교회
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;양재 온누리교회
+          </div>
+          <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+            <i class="fa fa-angle-right " aria-hidden="true" style={{color:'#e5e5e5', fontWeight:'bold'}}></i>&nbsp;&nbsp;캠퍼스교회
+          </div>
+
+          <div className={cx('menu_contents_title')} style={{padding: 30, width:140}}>
+            온누리교회 홍보관
+          </div>
+
+
+        </Grid>
+        <Grid item sm={1} style={{marginLeft: -5}}>
+
+        </Grid>
+      </Grid>
+    )
+  }
 }
 
 export default Menu_Second_Content;

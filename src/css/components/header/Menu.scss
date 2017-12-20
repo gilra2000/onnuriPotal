@@ -95,7 +95,7 @@
   font-weight: bold;
   display: block;
   line-height: 1.2;
-  padding-top: 23px;
+  padding-top: 30px;
   padding-left: 15px;
 }
 
@@ -109,4 +109,22 @@
 
 .menu_contents_layout {
 
+}
+
+.menu_contents_title {
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(36,113,129,.75);
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.menu_contents_title_sub {
+  color:#fff;
+  font-size: 14px;
+  display: block;
+  padding: 0px 0 8px 17px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(36,113,129,.75);
+  letter-spacing:1px;
 }
