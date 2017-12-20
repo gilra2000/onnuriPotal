@@ -51,7 +51,7 @@ class Menu extends React.Component {
     }
   }
 
-  getMotionHeight(pos) {
+  getMotionHeight(pos){
     switch (pos) {
       case 0:
         return 350;
@@ -153,7 +153,9 @@ class Menu extends React.Component {
                          style={{color: activeColor}}>
                       {val} <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </div>
-
+                    {
+                      this.state.activeMenu === key && <div className={cx('header_menu_img')}>&nbsp;</div>
+                    }
                   </Grid>
                 })
               }
@@ -166,7 +168,7 @@ class Menu extends React.Component {
           style={{height: spring(this.state.motionHeight)}}
         >
           {(style) => (
-            <div style={{width: '100%', height: 0, position: 'absolute', zIndex: 99999}}>
+            <div style={{width: '100%', height: 100, position: 'absolute', zIndex: 99999}}>
               <div style={{
                 height: style.height,
                 width: '100%',
