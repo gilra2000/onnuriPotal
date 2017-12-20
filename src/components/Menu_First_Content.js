@@ -33,8 +33,9 @@ class Menu_First_Content extends React.Component {
                    style={{marginLeft: 0}}/>
             </div>
             <div style={{marginLeft: 13}}>
-              <div style={{fontSize: 18, paddingTop: 12, color: '#fff'}}>
+              <div style={{fontSize: 18, paddingTop: 12, color: '#fff', cursor:'pointer'}} onClick={()=>{alert(1)}}>
                 환영합니다
+                &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </div>
               <div className={cx('menu_contents_sub_text')} style={{paddingTop: 13, width: 190}}>
                 온누리교회에 소중한 발걸음을 해<br/>주신 새가족을 위한 정보를 한눈에!
@@ -50,6 +51,7 @@ class Menu_First_Content extends React.Component {
             <div style={{marginLeft: 8}}>
               <div style={{fontSize: 18, paddingTop: 12, color: '#fff'}}>
                 교회 방문하기
+                &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </div>
               <div className={cx('menu_contents_sub_text')} style={{paddingTop: 13, width: 190}}>
                 서빙고, 양재를 비롯해 지역별 온누<br/>리교회로 오시는 길을 안내합니다.
@@ -64,6 +66,7 @@ class Menu_First_Content extends React.Component {
             <div style={{marginLeft: 3}}>
               <div style={{fontSize: 18, paddingTop: 12, color: '#fff'}}>
                 새가족 등록하기
+                &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </div>
               <div className={cx('menu_contents_sub_text')} style={{paddingTop: 13, width: 190}}>
                 온누리 교인이 되기 위한 첫 걸음,<br/> 새가족 등록에 대한 모든 것
@@ -78,6 +81,7 @@ class Menu_First_Content extends React.Component {
             <div style={{marginLeft: 0}}>
               <div style={{fontSize: 18, paddingTop: 12, color: '#fff'}}>
                 사역 참여하기
+                &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </div>
               <div className={cx('menu_contents_sub_text')} style={{paddingTop: 13, width: 190}}>
                 온누리교회의 교인이 되었다면 사<br/>역에 참여할 준비가 되었습니다.
@@ -91,10 +95,16 @@ class Menu_First_Content extends React.Component {
             </div>
             <div style={{marginLeft: 0}}>
               <div style={{fontSize: 18, paddingTop: 12, color: '#fff'}} onClick={this.props.menuHide}>
-                <NavLink to="/posts" style={{color: '#fff', textDecoration: 'none'}}>교회 용어집</NavLink>
+                <NavLink to="/posts" style={{color: '#fff', textDecoration: 'none'}}>
+                  교회 용어집
+                  &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </NavLink>
               </div>
               <div style={{fontSize: 18, paddingTop: 12, color: '#fff'}} onClick={this.props.menuHide}>
-                <NavLink to="/users" style={{color: '#fff', textDecoration: 'none'}}>새가족 FAQ</NavLink>
+                <NavLink to="/users" style={{color: '#fff', textDecoration: 'none'}}>
+                  새가족 FAQ
+                  &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </NavLink>
               </div>
             </div>
           </Grid>

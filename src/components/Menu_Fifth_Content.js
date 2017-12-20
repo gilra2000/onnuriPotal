@@ -6,6 +6,11 @@ import {NavLink} from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
+var iconStyle = {
+  color: 'rgba(209, 232, 237, 0.6)',
+  fontWeight: 'bold'
+}
+
 class Menu_Fifth_Content extends React.Component {
   render() {
     if (this.props.height > 300) {
@@ -28,29 +33,30 @@ class Menu_Fifth_Content extends React.Component {
           <Grid item sm={3}>
             <div className={cx('menu_contents_title')} style={{paddingLeft: 30, paddingTop: 30}}>
               온누리의 선교와 사역
+              &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
             </div>
             <div className={cx('menu_contents_title')} style={{paddingLeft: 30}}>
               2000선교 활동
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;선교비전
+                 style={iconStyle}></i>&nbsp;&nbsp;선교비전
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;선교사 파송
+                 style={iconStyle}></i>&nbsp;&nbsp;선교사 파송
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;해외 아웃리치
+                 style={iconStyle}></i>&nbsp;&nbsp;해외 아웃리치
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;NGO 지원
+                 style={iconStyle}></i>&nbsp;&nbsp;NGO 지원
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;외국인 이주민
+                 style={iconStyle}></i>&nbsp;&nbsp;외국인 이주민
             </div>
 
             <div className={cx('menu_contents_title')} style={{paddingLeft: 30, paddingTop: 30, paddingBottom: 30}}>
@@ -58,15 +64,15 @@ class Menu_Fifth_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;비전교회 협력위원회
+                 style={iconStyle}></i>&nbsp;&nbsp;비전교회 협력위원회
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;의료선교
+                 style={iconStyle}></i>&nbsp;&nbsp;의료선교
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;러브소나타
+                 style={iconStyle}></i>&nbsp;&nbsp;러브소나타
             </div>
 
           </Grid>
@@ -79,32 +85,33 @@ class Menu_Fifth_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;불우이웃/농어촌
+                 style={iconStyle}></i>&nbsp;&nbsp;불우이웃/농어촌
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;장애우
+                 style={iconStyle}></i>&nbsp;&nbsp;장애우
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;탈북민
+                 style={iconStyle}></i>&nbsp;&nbsp;탈북민
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;교도소
+                 style={iconStyle}></i>&nbsp;&nbsp;교도소
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;군부대
+                 style={iconStyle}></i>&nbsp;&nbsp;군부대
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;병원
+                 style={iconStyle}></i>&nbsp;&nbsp;병원
             </div>
 
 
             <div className={cx('menu_contents_title')} style={{padding: 30}}>
               복지재단
+              &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
             </div>
             <div className={cx('menu_contents_title_sub')}
                  style={{marginTop: -7, paddingLeft: 32, fontSize: 12, fontWeight: 400}}>
@@ -121,35 +128,35 @@ class Menu_Fifth_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;양육사역
+                 style={iconStyle}></i>&nbsp;&nbsp;양육사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;예배사역
+                 style={iconStyle}></i>&nbsp;&nbsp;예배사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;가정사역
+                 style={iconStyle}></i>&nbsp;&nbsp;가정사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;회복사역
+                 style={iconStyle}></i>&nbsp;&nbsp;회복사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;긍휼사역
+                 style={iconStyle}></i>&nbsp;&nbsp;긍휼사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;여성사역
+                 style={iconStyle}></i>&nbsp;&nbsp;여성사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;전도사역
+                 style={iconStyle}></i>&nbsp;&nbsp;전도사역
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;JDS 예수제자학교
+                 style={iconStyle}></i>&nbsp;&nbsp;JDS 예수제자학교
             </div>
 
 

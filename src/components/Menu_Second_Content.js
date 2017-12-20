@@ -133,6 +133,7 @@ class Menu_Second_Content extends React.Component {
 
             <div className={cx('menu_contents_title')} style={{padding: 30}}>
               약도/주차
+              &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true" style={iconStyle}></i>&nbsp;&nbsp;서빙고 온누리교회
@@ -144,8 +145,9 @@ class Menu_Second_Content extends React.Component {
               <i class="fa fa-angle-right " aria-hidden="true" style={iconStyle}></i>&nbsp;&nbsp;캠퍼스교회
             </div>
 
-            <div className={cx('menu_contents_title')} style={{padding: 30, width: 140}}>
+            <div className={cx('menu_contents_title')} style={{paddingLeft: 30, paddingTop:30}}>
               온누리교회 홍보관
+              &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
             </div>
 
 

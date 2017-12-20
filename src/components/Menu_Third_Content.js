@@ -6,6 +6,11 @@ import {NavLink} from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
+var iconStyle = {
+  color: 'rgba(209, 232, 237, 0.6)',
+  fontWeight: 'bold'
+}
+
 class Menu_Third_Content extends React.Component {
   render() {
     if (this.props.height > 300) {
@@ -33,23 +38,23 @@ class Menu_Third_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;주일 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;주일 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;새신자 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;새신자 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;어린이 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;어린이 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;새벽기도회
+                 style={iconStyle}></i>&nbsp;&nbsp;새벽기도회
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;비전교회 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;비전교회 예배
             </div>
 
             <div className={cx('menu_contents_title')} style={{padding: 30}}>
@@ -57,11 +62,11 @@ class Menu_Third_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;책별 설교
+                 style={iconStyle}></i>&nbsp;&nbsp;책별 설교
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;인물별 설교
+                 style={iconStyle}></i>&nbsp;&nbsp;인물별 설교
             </div>
 
           </Grid>
@@ -71,19 +76,22 @@ class Menu_Third_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;주중 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;주중 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;대학청년 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;대학청년 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;외국어 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;외국어 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;캠퍼스교회 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;캠퍼스교회 예배
+            </div>
+            <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
+              &nbsp;
             </div>
 
             <div className={cx('menu_contents_title')} style={{padding: 30}}>
@@ -91,11 +99,11 @@ class Menu_Third_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;주제별 설교
+                 style={iconStyle}></i>&nbsp;&nbsp;주제별 설교
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;Acts29
+                 style={iconStyle}></i>&nbsp;&nbsp;Acts29
             </div>
           </Grid>
           <Grid item sm={3} style={{marginLeft: 15}}>
@@ -104,23 +112,23 @@ class Menu_Third_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;작은예수 40일 새벽기도회
+                 style={iconStyle}></i>&nbsp;&nbsp;작은예수 40일 새벽기도회
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;러브소나타
+                 style={iconStyle}></i>&nbsp;&nbsp;러브소나타
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;온누리 회복축제
+                 style={iconStyle}></i>&nbsp;&nbsp;온누리 회복축제
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;청소년 집회 Passion
+                 style={iconStyle}></i>&nbsp;&nbsp;청소년 집회 Passion
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 32}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;수요선교집회
+                 style={iconStyle}></i>&nbsp;&nbsp;수요선교집회
             </div>
 
           </Grid>
@@ -131,23 +139,23 @@ class Menu_Third_Content extends React.Component {
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 0}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;절기별 예배
+                 style={iconStyle}></i>&nbsp;&nbsp;절기별 예배
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 0}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;온누리 부흥축제
+                 style={iconStyle}></i>&nbsp;&nbsp;온누리 부흥축제
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 0}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;맞춤전도집회
+                 style={iconStyle}></i>&nbsp;&nbsp;맞춤전도집회
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 0}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;온누리 리더십축제
+                 style={iconStyle}></i>&nbsp;&nbsp;온누리 리더십축제
             </div>
             <div className={cx('menu_contents_title_sub')} style={{paddingLeft: 0}}>
               <i class="fa fa-angle-right " aria-hidden="true"
-                 style={{color: '#e5e5e5', fontWeight: 'bold'}}></i>&nbsp;&nbsp;경배와찬양
+                 style={iconStyle}></i>&nbsp;&nbsp;경배와찬양
             </div>
           </Grid>
         </Grid>
