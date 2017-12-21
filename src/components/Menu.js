@@ -233,11 +233,15 @@ class Menu extends React.Component {
           {(style) => (
             <div style={{width: '100%', height: 100, position: 'absolute', zIndex: 99999}}>
               <div style={{
-                height: style.height,
                 width: '100%',
                 backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)'
               }}>
-
+                {
+                  this.state.activeMenu !== '' &&
+                  <div style={{margin: 'auto', maxWidth: 1180}}>
+                    {this.getMenuContent(style.height)}
+                  </div>
+                }
               </div>
             </div>
           )}
