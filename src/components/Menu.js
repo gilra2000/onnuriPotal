@@ -132,6 +132,13 @@ class Menu extends React.Component {
   }
 
   render() {
+    const sideList = (
+      <div style={{width:250}}>
+
+        <Divider />
+
+      </div>
+    );
 
     return (
       <div className={cx('bg')}>
@@ -250,6 +257,16 @@ class Menu extends React.Component {
         {/*<div style={{width:'100%', height:100, backgroundColor:'red', position:'absolute', zIndex:9999}}></div>*/}
         {/*}*/}
 
+        <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer('left', false)}
+            onKeyDown={this.toggleDrawer('left', false)}
+          >
+            {sideList}
+          </div>
+        </Drawer>
 
       </div>
 
