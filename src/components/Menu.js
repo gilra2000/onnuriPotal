@@ -145,8 +145,6 @@ class Menu extends React.Component {
 
 
 
-        {
-          this.state.test ?
 
             <div>
               <div className={cx('onr_gnb')}>
@@ -211,20 +209,6 @@ class Menu extends React.Component {
               </div>
               
             </div>
-
-            :
-
-            <div className={cx('header')} style={{display:'flex', alignItems:'center', height:55}}>
-              <div style={{display:'flex', flexDirection:'row', alignItems:'center', cursor:'pointer'}} onClick={this.toggleDrawer('left', true)} >
-                <i class="fa fa-bars" aria-hidden="true" style={{fontSize:21, paddingLeft:17, color:'#717171'}}></i>
-                <div style={{height:55, width:1,  backgroundColor:'#c6c6c6', marginLeft:17}}></div>
-              </div>
-              <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
-                <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:80, height:40, marginTop:5}} />
-              </div>
-            </div>
-
-        }
 
 
 
