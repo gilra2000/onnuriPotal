@@ -195,13 +195,7 @@ class Menu extends React.Component {
 
             :
 
-            <div className={cx('header')} style={{display:'flex', alignItems:'center', height:55}}>
-              <i class="fa fa-bars" aria-hidden="true" style={{fontSize:21, paddingLeft:15, color:'#717171'}}></i>
-              <div style={{height:'100%', width:1,  backgroundColor:'#c6c6c6', marginLeft:17}}></div>
-              <div style={{width:'100%', textAlign:'center'}}>
-                <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:80, height:40, marginTop:5}} />
-              </div>
-            </div>
+            <div></div>
 
         }
 
