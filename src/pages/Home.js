@@ -55,7 +55,7 @@ class Home extends React.Component {
           <div>
               {/*<Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>*/}
 
-              <div style={{backgroundColor:'#f5f5f5',maxHeight:544}}>
+              <div style={{backgroundColor:'#f5f5f5'}}>
                   <Carousel ref="carousel" autoplay={true} autoplayInterval={5000} slideIndex={this.state.slideIndex} wrapAround={true} width={'100%'} style={{maxWidth:1180, minWidth:400, margin:'auto'}} >
                       <img src="http://www.onnuri.org/wp-content/uploads/2017/12/2017_petitM.jpg"/>
                       <img src="http://www.onnuri.org/wp-content/uploads/2017/11/angeltree_17.png"/>
