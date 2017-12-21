@@ -132,19 +132,12 @@ class Menu extends React.Component {
   }
 
   render() {
-    const sideList = (
-      <div style={{width:250}}>
-
-        <Divider />
-
-      </div>
-    );
 
     return (
       <div className={cx('bg')}>
 
-
-
+        {
+          this.state.test ?
 
             <div>
               <div className={cx('onr_gnb')}>
@@ -210,6 +203,20 @@ class Menu extends React.Component {
               
             </div>
 
+            :
+
+            <div className={cx('header')} style={{display:'flex', alignItems:'center', height:55}}>
+              <div style={{display:'flex', flexDirection:'row', alignItems:'center', cursor:'pointer'}} onClick={this.toggleDrawer('left', true)} >
+                <i class="fa fa-bars" aria-hidden="true" style={{fontSize:21, paddingLeft:17, color:'#717171'}}></i>
+                <div style={{height:55, width:1,  backgroundColor:'#c6c6c6', marginLeft:17}}></div>
+              </div>
+              <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
+                <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:80, height:40, marginTop:5}} />
+              </div>
+            </div>
+
+        }
+
 
 
         <Motion
@@ -243,16 +250,6 @@ class Menu extends React.Component {
         {/*<div style={{width:'100%', height:100, backgroundColor:'red', position:'absolute', zIndex:9999}}></div>*/}
         {/*}*/}
 
-        <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('left', false)}
-            onKeyDown={this.toggleDrawer('left', false)}
-          >
-            {sideList}
-          </div>
-        </Drawer>
 
       </div>
 
