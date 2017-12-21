@@ -63,7 +63,8 @@ class Menu extends React.Component {
             //큰화면
             // window width is at least 500px
         } else {
-            this.setState({test: false})
+            this.setState({test: false});
+            this.menuHide();
             //작은화면
             // window width is less than 500px
         }
@@ -257,40 +258,11 @@ class Menu extends React.Component {
                             <div style={{height:55, width:1,  backgroundColor:'#c6c6c6', marginLeft:17}}></div>
                         </div>
                         <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
-                            <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:80, height:40, marginTop:5}} />
+                            <a href='/' >
+                                <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:80, height:40, marginTop:5}} />
+                            </a>
                         </div>
                     </div>
-
-                    <Motion
-                        defaultStyle={{height: 0}}
-                        style={{height: spring(this.state.motionHeight)}}
-                    >
-                        {(style) => (
-                            <div style={{width: '100%', height: 100, position: 'absolute', zIndex: 99999}}>
-                                <div style={{
-                                    height: style.height,
-                                    width: '100%',
-                                    backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)'
-                                }}>
-                                    {
-                                        this.state.activeMenu !== '' &&
-                                        <div style={{margin: 'auto', maxWidth: 1180}}>
-                                            {this.getMenuContent(style.height)}
-                                        </div>
-                                    }
-                                </div>
-                            </div>
-                        )}
-
-                    </Motion>
-
-                    {/*<div onClick={()=>{this.setState({isView: !this.state.isView})}} style={{height:54, backgroundColor:'#f6f6f6'}}>*/}
-
-                    {/*</div>*/}
-                    {/*{*/}
-                    {/*this.state.isView &&*/}
-                    {/*<div style={{width:'100%', height:100, backgroundColor:'red', position:'absolute', zIndex:9999}}></div>*/}
-                    {/*}*/}
 
                     <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
                         <div
