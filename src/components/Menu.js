@@ -10,8 +10,7 @@ import Menu_Second_Content from 'components/Menu_Second_Content';
 import Menu_Third_Content from 'components/Menu_Third_Content';
 import Menu_Fourth_Content from 'components/Menu_Fourth_Content';
 import Menu_Fifth_Content from 'components/Menu_Fifth_Content';
-import Drawer from 'material-ui/Drawer';
-import Divider from 'material-ui/Divider';
+import AppBar from 'material-ui/AppBar';
 
 const cx = classNames.bind(styles);
 
@@ -27,11 +26,7 @@ class Menu extends React.Component {
       motionHeight: 0,
       activeMenu: '',
       isMenuContent: false,
-      test: true,
-      top: false,
-      left: false,
-      bottom: false,
-      right: false,
+      test: true
     }
 
     this.debouncedFunc = debounce(() => {
@@ -41,12 +36,6 @@ class Menu extends React.Component {
     }, 200);
 
   }
-
-  toggleDrawer = (side, open) => () => {
-    this.setState({
-      [side]: open,
-    });
-  };
 
   componentDidMount() {
     // media query event handler
@@ -132,16 +121,10 @@ class Menu extends React.Component {
   }
 
   render() {
-    const sideList = (
-      <div style={{width:250}}>
-
-        <Divider />
-
-      </div>
-    );
-
     return (
       <div className={cx('bg')}>
+
+
 
         {
           this.state.test ?
@@ -213,11 +196,9 @@ class Menu extends React.Component {
             :
 
             <div className={cx('header')} style={{display:'flex', alignItems:'center', height:55}}>
-              <div style={{display:'flex', flexDirection:'row', alignItems:'center', cursor:'pointer'}} onClick={this.toggleDrawer('left', true)} >
-                <i class="fa fa-bars" aria-hidden="true" style={{fontSize:21, paddingLeft:17, color:'#717171'}}></i>
-                <div style={{height:55, width:1,  backgroundColor:'#c6c6c6', marginLeft:17}}></div>
-              </div>
-              <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
+              <i class="fa fa-bars" aria-hidden="true" style={{fontSize:21, paddingLeft:15, color:'#717171'}}></i>
+              <div style={{height:'100%', width:1,  backgroundColor:'#c6c6c6', marginLeft:17}}></div>
+              <div style={{width:'100%', textAlign:'center'}}>
                 <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri" style={{width:80, height:40, marginTop:5}} />
               </div>
             </div>
@@ -235,6 +216,7 @@ class Menu extends React.Component {
               <div style={{
                 height: style.height,
                 width: '100%',
+                backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)'
               }}>
                 {
                   this.state.activeMenu !== '' &&
@@ -255,18 +237,6 @@ class Menu extends React.Component {
         {/*this.state.isView &&*/}
         {/*<div style={{width:'100%', height:100, backgroundColor:'red', position:'absolute', zIndex:9999}}></div>*/}
         {/*}*/}
-
-        <Drawer open={this.state.left} onRequestClose={this.toggleDrawer('left', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('left', false)}
-            onKeyDown={this.toggleDrawer('left', false)}
-          >
-            {sideList}
-          </div>
-        </Drawer>
-
       </div>
 
     )
