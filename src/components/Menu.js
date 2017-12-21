@@ -226,29 +226,6 @@ class Menu extends React.Component {
 
 
 
-        <Motion
-          defaultStyle={{height: 0}}
-          style={{height: spring(this.state.motionHeight)}}
-        >
-          {(style) => (
-            <div style={{width: '100%', height: 100, position: 'absolute', zIndex: 99999}}>
-              <div style={{
-                height: style.height,
-                width: '100%',
-                backgroundImage: 'url(http://www.onnuri.org/wp-content/themes/onnuri/images/bg_megamenu.gif)'
-              }}>
-                {
-                  this.state.activeMenu !== '' &&
-                  <div style={{margin: 'auto', maxWidth: 1180}}>
-                    {this.getMenuContent(style.height)}
-                  </div>
-                }
-              </div>
-            </div>
-          )}
-
-        </Motion>
-
         {/*<div onClick={()=>{this.setState({isView: !this.state.isView})}} style={{height:54, backgroundColor:'#f6f6f6'}}>*/}
 
         {/*</div>*/}
