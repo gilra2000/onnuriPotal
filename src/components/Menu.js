@@ -116,7 +116,7 @@ class Menu extends React.Component {
             <ul className={cx('headerUl')}>
               <li className={cx('headerLi')}>
                 <a href="http://news.onnuri.org" title="온누리신문" target="_blank"
-                   className={cx('header_right_a_01')}>온누리신문1</a>
+                   className={cx('header_right_a_01')}>온누리신문</a>
               </li>
               <li className={cx('headerLi')}>
                 <a href="http://ischool.ionnuri.org/ischool/jsp/pre_index.jsp" title="아이스쿨" target="_blank"
