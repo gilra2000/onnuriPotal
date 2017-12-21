@@ -141,12 +141,12 @@ class Menu extends React.Component {
         );
 
         return (
-            <div>
+            <div className={cx('bg')}>
 
                 {
                     this.state.test ?
 
-                        <div className={cx('bg')}>
+                        <span>
                             <div className={cx('onr_gnb')}>
                                 <div className={cx('full')}>
                                     <h1 className={cx('logo')}>
@@ -208,7 +208,7 @@ class Menu extends React.Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </span>
 
                         :
 
