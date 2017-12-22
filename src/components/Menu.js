@@ -144,9 +144,9 @@ class Menu extends React.Component {
         if(this.state.test){
             return(
                 <div className={cx('bg')}>
-                    <div className={cx('onr_gnb')}>
-                        <div className={cx('full')}>
-                            <h1 className={cx('logo')} style={{marginLeft:20}}>
+                    <div className={cx('onr_gnb')} style={{paddingLeft:20}}>
+                        <div className={cx('full')} style={{paddingRight:50}}>
+                            <h1 className={cx('logo')}>
                                 <a href='/' title={'Onnuri'} className={cx('logoa')}>
                                     <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri"
                                          className={cx('logoImg')}/>
@@ -218,7 +218,7 @@ class Menu extends React.Component {
                                 }}>
                                     {
                                         this.state.activeMenu !== '' &&
-                                        <div style={{margin: 'auto', maxWidth: 1180}}>
+                                        <div style={{margin: 'auto', maxWidth: 1180, paddingLeft:20}}>
                                             {this.getMenuContent(style.height)}
                                         </div>
                                     }

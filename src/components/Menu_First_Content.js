@@ -10,7 +10,7 @@ class Menu_First_Content extends React.Component {
   render() {
     if (this.props.height > 300) {
       return (
-        <Grid container spacing={0} style={{marginLeft:20}}>
+        <Grid container spacing={0}>
           <Grid item sm={2}>
             <div className={cx('menu_contents')} style={{paddingLeft: 0, paddingBottom: 20}}>
               환영합니다
