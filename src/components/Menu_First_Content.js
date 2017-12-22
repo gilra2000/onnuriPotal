@@ -10,7 +10,7 @@ class Menu_First_Content extends React.Component {
   render() {
     if (this.props.height > 300) {
       return (
-        <Grid container spacing={0}>
+        <Grid container spacing={0} style={{marginLeft:20}}>
           <Grid item sm={2}>
             <div className={cx('menu_contents')} style={{paddingLeft: 0, paddingBottom: 20}}>
               환영합니다
@@ -33,9 +33,13 @@ class Menu_First_Content extends React.Component {
                    style={{marginLeft: 0}}/>
             </div>
             <div style={{marginLeft: 13}}>
-              <div style={{fontSize: 18, paddingTop: 12, color: '#fff', cursor:'pointer'}} onClick={()=>{alert(1)}}>
-                환영합니다
-                &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+              <div style={{fontSize: 18, paddingTop: 12, color: '#fff', cursor:'pointer'}} onClick={this.props.menuHide}>
+
+                <NavLink to="/welcome" style={{color: '#fff', textDecoration: 'none'}}>
+                  환영합니다
+                  &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </NavLink>
+
               </div>
               <div className={cx('menu_contents_sub_text')} style={{paddingTop: 13, width: 190}}>
                 온누리교회에 소중한 발걸음을 해<br/>주신 새가족을 위한 정보를 한눈에!

@@ -146,7 +146,7 @@ class Menu extends React.Component {
                 <div className={cx('bg')}>
                     <div className={cx('onr_gnb')}>
                         <div className={cx('full')}>
-                            <h1 className={cx('logo')}>
+                            <h1 className={cx('logo')} style={{marginLeft:20}}>
                                 <a href='/' title={'Onnuri'} className={cx('logoa')}>
                                     <img src="http://www.onnuri.org/wp-content/themes/onnuri/images/logo.svg" alt="Onnuri"
                                          className={cx('logoImg')}/>
