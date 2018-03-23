@@ -17,3 +17,10 @@ app.use(serve(path.resolve(__dirname, '../build/')));
 app.use(render);
 
 app.listen(3001);
+
+app.get('/test',function(req,res){
+  res.render('index', {
+    title: "MY HOMEPAGE",
+    length: 5
+  })
+});
