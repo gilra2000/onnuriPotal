@@ -22,8 +22,13 @@ class OnnuriVote extends React.Component {
     super(props);
 
     this.state = {
-      userList: []
+      userList: [],
+      start: false
     }
+
+    this.interval = null;
+
+    this.start = this.start.bind(this);
 
     this.tabTitle = (key) => {
       let title = key === 0 ? '전체' : '캠퍼스별';
@@ -191,7 +196,10 @@ class OnnuriVote extends React.Component {
 
   componentDidMount() {
     this.fetch();
-    setInterval(()=>{
+  }
+
+  startInterval() {
+    this.interval = setInterval(()=>{
       this.fetch();
     }, 3000)
   }
@@ -212,6 +220,18 @@ class OnnuriVote extends React.Component {
       .then(function () {
         // always executed
       });
+  }
+
+  start() {
+    if(this.state.start) {
+      clearInterval(this.interval);
+    }else{
+      this.startInterval();
+    }
+
+    this.setState({
+      start: !this.state.start
+    })
   }
 
   render(){
@@ -237,6 +257,11 @@ class OnnuriVote extends React.Component {
             {this.makeMultiTabPane(2)}
           </Tabs>
         </div>
+
+        <div onClick={()=>this.start()} style={{width:20, height:20, backgroundColor: this.state.start ? 'red' : 'blue', borderRadius:25, position:'fixed', bottom:20, right:20}}>
+
+        </div>
+
       </div>
     )
   }
