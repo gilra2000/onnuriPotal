@@ -42,26 +42,45 @@ class OnnuriVote extends React.Component {
         return(
           <TabPane tab={this.tabTitle(key)} data-extra="tabpane" key={`${key}`}>
             <div style={{backgroundColor:'#fff'}}>
+              <Grid container style={{textAlign:'center', backgroundColor:'#eee'}}>
+                <Grid item xs={2} style={{paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                  <div style={{fontSize:20, fontWeight:'bold'}}>기호</div>
+                </Grid>
+                <Grid item xs={2} style={{paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                  <div style={{fontSize:20, fontWeight:'bold'}}>공동체</div>
+                </Grid>
+                <Grid item xs={6} style={{paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                  <div style={{fontSize:20, fontWeight:'bold'}}>성명</div>
+                </Grid>
+                <Grid item xs={2} style={{paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                  <div style={{fontSize:20, fontWeight:'bold'}}>기표</div>
+                </Grid>
+              </Grid>
+
               {
                 this.state.userList.map((key, i)=>{
                   return(
-                    <div style={{border: '1px solid #f9f9f9', padding:10}}>
-                      <Grid container justify={'center'}>
-                        <Grid item xs={4}>
-                          <Grid container>
-                            <Grid item xs={2} style={{fontSize:18}}>
-                              {'기호'+key.num}
-                            </Grid>
-                            <Grid item xs={4} style={{fontSize:18}}>
-                              {key.campus}
-                            </Grid>
-                            <Grid item xs={5} style={{fontSize:25, fontWeight:'600'}}>
-                              {key.name}
-                            </Grid>
-                            <Grid item xs={1} style={{fontSize:25, color:'red'}}>
-                              {key.vote}
-                            </Grid>
-                          </Grid>
+                    <div style={{paddingBottom:10, marginTop:7, borderBottom: '1px solid #f1f1f1', paddingTop:15}}>
+                      <Grid container style={{textAlign:'center'}}>
+                        <Grid item xs={2} style={{backgroundColor:'#fff', borderRight:'1px solid #f1f1f1'}}>
+                          <div style={{fontSize:20}}>
+                            {key.num}
+                          </div>
+                        </Grid>
+                        <Grid item xs={2} style={{backgroundColor:'#fff', borderRight:'1px solid #f1f1f1'}}>
+                          <div style={{fontSize:20}}>
+                            {key.campus}
+                          </div>
+                        </Grid>
+                        <Grid item xs={6} style={{backgroundColor:'#fff', borderRight:'1px solid #f1f1f1'}}>
+                          <div style={{fontSize:25, fontWeight:'bold'}}>
+                            {key.name}
+                          </div>
+                        </Grid>
+                        <Grid item xs={2} style={{backgroundColor:'#fff', borderRight:'1px solid #f1f1f1'}}>
+                          <div style={{fontSize:25, color:'red', fontWeight:'bold'}}>
+                            {key.vote}
+                          </div>
                         </Grid>
                       </Grid>
                     </div>
