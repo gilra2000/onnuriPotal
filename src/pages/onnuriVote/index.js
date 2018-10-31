@@ -15,6 +15,7 @@ const cx = classNames.bind(styles);
 
 const url = 'http://ec2-52-79-121-61.ap-northeast-2.compute.amazonaws.com:3000/api';
 // const url = 'http://192.168.25.101:3000/api';
+// const url = 'http://192.168.255.99:3000/api';
 
 class OnnuriVote extends React.Component {
 
@@ -69,7 +70,7 @@ class OnnuriVote extends React.Component {
                         </Grid>
                         <Grid item xs={2} style={{backgroundColor:'#fff', borderRight:'1px solid #f1f1f1'}}>
                           <div style={{fontSize:20}}>
-                            {key.campus}
+                            {key.campus}({key.comm})
                           </div>
                         </Grid>
                         <Grid item xs={6} style={{backgroundColor:'#fff', borderRight:'1px solid #f1f1f1'}}>
@@ -122,7 +123,7 @@ class OnnuriVote extends React.Component {
                                 <div>{'기호'+key.num}</div>
                               </Grid>
                               <Grid item xs={4}>
-                                <div style={{fontSize:18}}>{key.name}</div>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
                               </Grid>
                               <Grid item xs={4}>
                                 <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
@@ -143,7 +144,7 @@ class OnnuriVote extends React.Component {
                                 <div>{'기호'+key.num}</div>
                               </Grid>
                               <Grid item xs={4}>
-                                <div style={{fontSize:18}}>{key.name}</div>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
                               </Grid>
                               <Grid item xs={4}>
                                 <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
@@ -164,7 +165,7 @@ class OnnuriVote extends React.Component {
                                 <div>{'기호'+key.num}</div>
                               </Grid>
                               <Grid item xs={4}>
-                                <div style={{fontSize:18}}>{key.name}</div>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
                               </Grid>
                               <Grid item xs={4}>
                                 <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
@@ -185,7 +186,7 @@ class OnnuriVote extends React.Component {
                                 <div>{'기호'+key.num}</div>
                               </Grid>
                               <Grid item xs={4}>
-                                <div style={{fontSize:18}}>{key.name}</div>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
                               </Grid>
                               <Grid item xs={4}>
                                 <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
