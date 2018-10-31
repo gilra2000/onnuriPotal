@@ -32,7 +32,18 @@ class OnnuriVote extends React.Component {
     this.start = this.start.bind(this);
 
     this.tabTitle = (key) => {
-      let title = key === 0 ? '전체' : '캠퍼스별';
+      let title;
+
+      if(key === 0) {
+        title = '전체';
+      }else if(key === 1){
+        title = '서빙고/양재';
+      }else if(key === 2){
+        title = '캠퍼스/사역단위';
+      }else if(key === 3){
+        title = '캠퍼스전체';
+      }
+
       return(
         <div style={{paddingTop:15, paddingBottom:15, fontSize:25, fontWeight:'bold'}} data-extra="tab-bar-title">{title}</div>
       )
@@ -154,7 +165,7 @@ class OnnuriVote extends React.Component {
             </div>
           </TabPane>
         )
-      }else{
+      }else if(key ===2){
         return(
           <TabPane tab={this.tabTitle(key)} data-extra="tabpane" key={`${key}`}>
             <div style={{backgroundColor:'#fff'}}>
@@ -165,7 +176,7 @@ class OnnuriVote extends React.Component {
                     <div style={{fontSize:20, fontWeight:'bold'}}>캠퍼스</div>
                   </Grid>
                   <Grid item xs={6} style={{backgroundColor:'#fff', paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
-                    <div style={{fontSize:20, fontWeight:'bold'}}>사역본부</div>
+                    <div style={{fontSize:20, fontWeight:'bold'}}>사역단위</div>
                   </Grid>
                 </Grid>
 
@@ -194,9 +205,120 @@ class OnnuriVote extends React.Component {
                   <Grid item xs={6} style={{backgroundColor:'#ffe4ea', paddingTop:20}}>
                     {
                       this.state.userList.map((key, i)=> {
-                        if(key.campus === '사역본부'){
+                        if(key.campus === '사역단위'){
                           return (
                             <Grid container style={{paddingTop:5, paddingBottom:5,borderBottom: '1px solid #eee'}}>
+                              <Grid item xs={4}>
+                                <div>{'기호'+key.num}</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
+                              </Grid>
+                            </Grid>
+                          )
+                        }
+                      })
+                    }
+                  </Grid>
+                </Grid>
+              </div>
+            </div>
+          </TabPane>
+        )
+      }else {
+        return(
+          <TabPane tab={this.tabTitle(key)} data-extra="tabpane" key={`${key}`}>
+            <div style={{backgroundColor:'#fff'}}>
+              <div style={{paddingTop:10, paddingBottom:10}}>
+
+                <Grid container style={{textAlign:'center'}}>
+                  <Grid item xs={3} style={{backgroundColor:'#fff', paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                    <div style={{fontSize:20, fontWeight:'bold'}}>서빙고</div>
+                  </Grid>
+                  <Grid item xs={3} style={{backgroundColor:'#fff', paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                    <div style={{fontSize:20, fontWeight:'bold'}}>양재</div>
+                  </Grid>
+                  <Grid item xs={3} style={{backgroundColor:'#fff', paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                    <div style={{fontSize:20, fontWeight:'bold'}}>캠퍼스</div>
+                  </Grid>
+                  <Grid item xs={3} style={{backgroundColor:'#fff', paddingTop:30, paddingBottom:30, borderRight:'1px solid #f1f1f1'}}>
+                    <div style={{fontSize:20, fontWeight:'bold'}}>사역단위</div>
+                  </Grid>
+                </Grid>
+
+                <Grid container style={{textAlign:'center'}}>
+                  <Grid item xs={3} style={{backgroundColor:'#d9f1ff', paddingTop:20}}>
+                    {
+                      this.state.userList.map((key, i)=> {
+                        if(key.campus === '서빙고'){
+                          return (
+                            <Grid container style={{paddingTop:5, paddingBottom:5}}>
+                              <Grid item xs={4}>
+                                <div>{'기호'+key.num}</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
+                              </Grid>
+                            </Grid>
+                          )
+                        }
+                      })
+                    }
+                  </Grid>
+                  <Grid item xs={3} style={{backgroundColor:'#e0fff3', paddingTop:20}}>
+                    {
+                      this.state.userList.map((key, i)=> {
+                        if(key.campus === '양재'){
+                          return (
+                            <Grid container style={{paddingTop:5, paddingBottom:5}}>
+                              <Grid item xs={4}>
+                                <div>{'기호'+key.num}</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
+                              </Grid>
+                            </Grid>
+                          )
+                        }
+                      })
+                    }
+                  </Grid>
+                  <Grid item xs={3} style={{backgroundColor:'#ffffed', paddingTop:20}}>
+                    {
+                      this.state.userList.map((key, i)=> {
+                        if(key.campus === '캠퍼스'){
+                          return (
+                            <Grid container style={{paddingTop:5, paddingBottom:5}}>
+                              <Grid item xs={4}>
+                                <div>{'기호'+key.num}</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:18}}>{key.name}({key.comm})</div>
+                              </Grid>
+                              <Grid item xs={4}>
+                                <div style={{fontSize:20, color:'red', fontWeight:'bold'}}>{key.vote}</div>
+                              </Grid>
+                            </Grid>
+                          )
+                        }
+                      })
+                    }
+                  </Grid>
+                  <Grid item xs={3} style={{backgroundColor:'#ffe4ea', paddingTop:20}}>
+                    {
+                      this.state.userList.map((key, i)=> {
+                        if(key.campus === '사역단위'){
+                          return (
+                            <Grid container style={{paddingTop:5, paddingBottom:5}}>
                               <Grid item xs={4}>
                                 <div>{'기호'+key.num}</div>
                               </Grid>
@@ -282,14 +404,14 @@ class OnnuriVote extends React.Component {
           <Tabs
             renderTabBar={() =>
               <SwipeableInkTabBar
-                pageSize={3}
+                pageSize={4}
                 speed={10}
               />
             }
             renderTabContent={() => <TabContent/>}
             defaultActiveKey="2"
           >
-            {this.makeMultiTabPane(3)}
+            {this.makeMultiTabPane(4)}
           </Tabs>
         </div>
 
