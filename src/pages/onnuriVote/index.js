@@ -35,7 +35,7 @@ class OnnuriVote extends React.Component {
       let title;
 
       if(key === 0) {
-        title = '전체';
+        title = '전체(득표순)';
       }else if(key === 1){
         title = '서빙고/양재';
       }else if(key === 2){
@@ -205,7 +205,7 @@ class OnnuriVote extends React.Component {
                   <Grid item xs={6} style={{backgroundColor:'#ffe4ea', paddingTop:20}}>
                     {
                       this.state.userList.map((key, i)=> {
-                        if(key.campus === '사역단위'){
+                        if(key.campus === '사역본부'){
                           return (
                             <Grid container style={{paddingTop:5, paddingBottom:5,borderBottom: '1px solid #eee'}}>
                               <Grid item xs={4}>
@@ -316,7 +316,7 @@ class OnnuriVote extends React.Component {
                   <Grid item xs={3} style={{backgroundColor:'#ffe4ea', paddingTop:20}}>
                     {
                       this.state.userList.map((key, i)=> {
-                        if(key.campus === '사역단위'){
+                        if(key.campus === '사역본부'){
                           return (
                             <Grid container style={{paddingTop:5, paddingBottom:5}}>
                               <Grid item xs={4}>
