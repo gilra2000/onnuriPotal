@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Home, About, Posts, Users, Welcome, OnnuriVote, OnnuriExequies } from 'pages/index.async';
+import { Home, About, Posts, Users, Welcome, OnnuriVote, OnnuriExequies, Kakao } from 'pages/index.async';
 import { Helmet } from "react-helmet";
 import Menu from 'components/Menu';
 import Footer from 'components/Footer';
@@ -24,6 +24,7 @@ class App extends Component {
                 {/*<Route path="/welcome" component={Welcome}/>*/}
                 <Route path="/onnuriVote" component={OnnuriVote}/>
                 <Route path="/onnuriExequies" component={OnnuriExequies}/>
+                <Route path="/kakao" component={Kakao}/>
                 {/*<Footer/>*/}
             </div>
         );
